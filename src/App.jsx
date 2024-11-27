@@ -23,6 +23,10 @@ const handleAddUser = event => {
    .then(response => response.json())
    .then(data => {
     console.log(data);
+    if(data.insertedID) {
+      alert('User added successfully');
+      form.reset();
+    } 
    })
 
 };
